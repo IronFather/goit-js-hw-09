@@ -19,11 +19,11 @@ startBtnEl.addEventListener(`click`, onStartBtnClick);
 
 
 let intervalId = null;
-let activeInterval = null;
+let isActiveInterval = null;
 
 function onStartBtnClick() {
 
-    if(!activeInterval) {
+    if(!isActiveInterval) {
         function getRandomHexColor() {
             return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
         };
@@ -33,7 +33,7 @@ function onStartBtnClick() {
         document.body.style.backgroundColor = randomBgdColor;
     }, 1000);
 
-    activeInterval = true;
+    isActiveInterval = true;
 
     startBtnEl.setAttribute('disabled', `true`);
     stopBtnEl.removeAttribute('disabled');
@@ -43,10 +43,10 @@ function onStartBtnClick() {
 stopBtnEl.addEventListener(`click`, onStopBtnClick);
 
 function onStopBtnClick() {
-    if(activeInterval) {
+    if(isActiveInterval) {
         clearInterval(intervalId);
         
-        activeInterval = false;
+        isActiveInterval = false;
         startBtnEl.removeAttribute('disabled');
         stopBtnEl.setAttribute('disabled', `true`); 
     }
