@@ -49,13 +49,5 @@ function onStopBtnClick() {
         isActiveInterval = false;
         startBtnEl.removeAttribute('disabled');
         stopBtnEl.setAttribute('disabled', `true`); 
-    }
-}
-
-
-
-
-
-
-
-
+    };
+};
