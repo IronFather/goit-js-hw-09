@@ -28,17 +28,17 @@ const options = {
         // console.log(selectedDates[0]);
 
         if (selectedDates[0].getTime() < Date.now()) {
-        Notiflix.Notify.success('Please choose a date in the future');
+            Notiflix.Notify.failure('Please choose a date in the future');
 
-        selectedDates[0] = new Date();
+            selectedDates[0] = new Date();
 
-        refs.startBtnEl.setAttribute('disabled', true);
-        return;
+            refs.startBtnEl.setAttribute('disabled', true);
+            return;
 
         } else {
-        refs.startBtnEl.removeAttribute('disabled');
-        selectedTime = selectedDates[0].getTime();
-        console.log(selectedTime);
+            refs.startBtnEl.removeAttribute('disabled');
+            selectedTime = selectedDates[0].getTime();
+            console.log(selectedTime);
         };
     },
 };

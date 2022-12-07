@@ -46,6 +46,21 @@ input {
   color: white;
 }
 
+[data-stop] {
+  align-items: center;
+  min-width: 60px;
+  height: 40px;
+  margin-left: 15px;
+
+  border-radius: 8px;
+  background-color: red;
+
+
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
 .timer {
     display: flex;
     justify-content: center;
